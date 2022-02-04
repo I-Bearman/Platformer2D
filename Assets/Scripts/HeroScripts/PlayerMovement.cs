@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isGrounded)
         {
-            anim.SetBool("Jump",true);
+            anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }

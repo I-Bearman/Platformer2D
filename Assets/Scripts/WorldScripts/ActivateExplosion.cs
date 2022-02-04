@@ -11,6 +11,7 @@ public class ActivateExplosion : MonoBehaviour
         {
             GameObject SparkClone = Instantiate(spark);
             SparkClone.GetComponent<Rigidbody2D>().velocity = new Vector2(1,0);
+            Destroy(GetComponent<BoxCollider2D>());
         }
     }
 }

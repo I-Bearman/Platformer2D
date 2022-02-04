@@ -11,5 +11,9 @@ public class DeathZoneScript : MonoBehaviour
         {
             collision.GetComponent<Health>().ActivateDeathPanel();
         }
+        else
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

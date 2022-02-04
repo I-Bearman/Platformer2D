@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
     {
         if (currentHealth < 0)
         {
-            anim.SetBool("Death", true);
+            anim.SetTrigger("Death");
 
             GetComponent<Rigidbody2D>().bodyType = 0;
             DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();

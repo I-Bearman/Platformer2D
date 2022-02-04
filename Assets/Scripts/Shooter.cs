@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour
 
     public void Shoot(float direction)
     {
-        anim.SetBool("Attack", true);
+        anim.SetTrigger("Attack");
         GameObject currentBullet = Instantiate(bullet, firePoint.position, Quaternion.identity);
         Rigidbody2D currentBulletVelocity = currentBullet.GetComponent<Rigidbody2D>();
 
