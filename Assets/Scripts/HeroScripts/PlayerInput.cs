@@ -2,17 +2,16 @@
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerMovement))]
-[RequireComponent(typeof(Shooter))]
 
 public class PlayerInput : MonoBehaviour
 {
     private PlayerMovement playerMovement;
-    private Shooter shooter;
+    private Attack attack;
 
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        shooter = GetComponent<Shooter>();
+        attack = GetComponent<Attack>();
     }
 
     private void Update()
@@ -22,7 +21,8 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetButtonDown(GlobalStringVars.FIRE_1))
         {
-            shooter.Shoot(horizontalDirection);
+            attack.Hit();
+            
         }
 
         playerMovement.Move(horizontalDirection, isJumpButtonPressed);

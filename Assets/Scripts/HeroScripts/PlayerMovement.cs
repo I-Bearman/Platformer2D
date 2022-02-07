@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AnimationCurve curve;
     [SerializeField] private float jumpOffset;
     [SerializeField] private LayerMask groundMask;
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform attackArea;
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprtRend;
@@ -60,13 +60,13 @@ public class PlayerMovement : MonoBehaviour
         if (direction < 0 && sprtRend.flipX == false)
         {
             sprtRend.flipX = true;
-            firePoint.localPosition = new Vector2(firePoint.localPosition.x *-1, firePoint.localPosition.y);
+            attackArea.localPosition = new Vector2(attackArea.localPosition.x *-1, attackArea.localPosition.y);
             collider.offset = new Vector2(collider.offset.x * -1, collider.offset.y);
         }
         if (direction >= 0 && sprtRend.flipX == true)
         {
             sprtRend.flipX = false;
-            firePoint.localPosition = new Vector2(firePoint.localPosition.x * -1, firePoint.localPosition.y);
+            attackArea.localPosition = new Vector2(attackArea.localPosition.x * -1, attackArea.localPosition.y);
             collider.offset = new Vector2(collider.offset.x * -1, collider.offset.y);
         }
 

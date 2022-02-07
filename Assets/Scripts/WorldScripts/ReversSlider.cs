@@ -16,10 +16,10 @@ public class ReversSlider : MonoBehaviour
     {
         if(platform.velocity == Vector2.zero && Vector2.Distance(platform.position, lastPos) > 1)
         {
+            lastPos = platform.position;
             JointMotor2D motor = slider.motor;
             motor.motorSpeed *= -1;
             slider.motor = motor;
-            lastPos = platform.position;
         }
     }
 }
