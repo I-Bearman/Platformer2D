@@ -10,6 +10,7 @@ public class ReversSlider : MonoBehaviour
     {
         platform = GetComponent<Rigidbody2D>();
         slider = GetComponent<SliderJoint2D>();
+        lastPos = platform.position;
     }
 
     void Update()

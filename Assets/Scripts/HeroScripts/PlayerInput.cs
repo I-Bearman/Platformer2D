@@ -22,9 +22,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetButtonDown(GlobalStringVars.FIRE_1))
         {
             attack.Hit();
-            
         }
-
         playerMovement.Move(horizontalDirection, isJumpButtonPressed);
     }
 

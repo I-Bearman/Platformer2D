@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("Death");
 
-            GetComponent<Rigidbody2D>().bodyType = 0;
+            Destroy(GetComponent<Rigidbody2D>());
             DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();
             Destroy(dDNB);
         }
