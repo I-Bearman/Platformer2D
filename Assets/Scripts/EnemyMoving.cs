@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyMoving : MonoBehaviour
 {
     [SerializeField] private float speed, timeToRevert;
+    [SerializeField] private BoxCollider2D attackTriggerCollider;
+    [SerializeField] private Transform attackArea;
 
     private Rigidbody2D rigitBody;
     private Animator anim;
@@ -25,6 +27,7 @@ public class EnemyMoving : MonoBehaviour
         rigitBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
+        attack = GetComponent<Attack>();
     }
 
     private void Update()
@@ -45,6 +48,8 @@ public class EnemyMoving : MonoBehaviour
             case revertState:
                 sp.flipX = !sp.flipX;
                 speed *= -1;
+                attackArea.localPosition = new Vector2(attackArea.localPosition.x * -1, attackArea.localPosition.y);
+                attackTriggerCollider.offset = new Vector2(attackTriggerCollider.offset.x * -1, attackTriggerCollider.offset.y);
                 currentState = walkState;
                 break;
         }
@@ -60,6 +65,7 @@ public class EnemyMoving : MonoBehaviour
 
         if(collision.gameObject.layer == 8)
         {
+            currentState = idleState;
             attack.Hit();
         }
     }

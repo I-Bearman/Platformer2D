@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class TaleController : MonoBehaviour
 {
@@ -8,6 +7,7 @@ public class TaleController : MonoBehaviour
 
     private Animator playerAnim;
     private PlayerInput playerInput;
+    private int i, lenghtOfDialog;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,16 +19,22 @@ public class TaleController : MonoBehaviour
         playerInput = player.GetComponent<PlayerInput>();
         playerAnim.SetFloat("Speed",0);
         playerInput.enabled = false;
-        panel[0].SetActive(true);
+        i = 0;
+        panel[i].SetActive(true);
+        lenghtOfDialog = panel.Length;
     }
     public void NextLog()
     {
-
+        if (i<lenghtOfDialog)
+        {
+            panel[i].SetActive(false);
+            panel[++i].SetActive(true);
+        }
     }
 
     public void FinishLog()
     {
-        panel[0].SetActive(false);
+        panel[i].SetActive(false);
         playerInput.enabled = true;
         Destroy(gameObject);
     }

@@ -19,7 +19,7 @@ TagManager:
   - Wall
   - Ground
   - Bonus
-  - 
+  - NPC
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2227082519
+    locked: 0
   - name: Far
     uniqueID: 3928904561
     locked: 0

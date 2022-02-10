@@ -27,10 +27,10 @@ public class Health : MonoBehaviour
         if (currentHealth < 0)
         {
             anim.SetTrigger("Death");
-
-            Destroy(GetComponent<Rigidbody2D>());
-            DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();
-            Destroy(dDNB);
+            GetComponent<EnemyMoving>().enabled = false;
+            //Destroy(GetComponent<Rigidbody2D>());
+           /* DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();
+            Destroy(dDNB);*/
         }
     }
 
