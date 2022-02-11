@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("Death");
             GetComponent<EnemyMoving>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
             //Destroy(GetComponent<Rigidbody2D>());
            /* DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();
             Destroy(dDNB);*/

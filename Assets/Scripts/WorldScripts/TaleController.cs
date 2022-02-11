@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using Cinemachine;
 
 public class TaleController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] panel;
+    [SerializeField] private CinemachineVirtualCamera taleCamera;
 
     private Animator playerAnim;
     private PlayerInput playerInput;
@@ -19,6 +21,11 @@ public class TaleController : MonoBehaviour
         playerInput = player.GetComponent<PlayerInput>();
         playerAnim.SetFloat("Speed",0);
         playerInput.enabled = false;
+
+        if(taleCamera)
+        {
+            taleCamera.Priority = 20;
+        }
         i = 0;
         panel[i].SetActive(true);
         lenghtOfDialog = panel.Length;
@@ -35,6 +42,10 @@ public class TaleController : MonoBehaviour
     public void FinishLog()
     {
         panel[i].SetActive(false);
+        if (taleCamera)
+        {
+            taleCamera.Priority = 0;
+        }
         playerInput.enabled = true;
         Destroy(gameObject);
     }
