@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyMoving : MonoBehaviour
 {
@@ -40,6 +38,7 @@ public class EnemyMoving : MonoBehaviour
         switch(currentState)
         {
             case idleState:
+                rigitBody.velocity = Vector2.zero;
                 currentTimeToRevert += Time.deltaTime;
                 break;
             case walkState:

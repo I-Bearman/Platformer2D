@@ -24,11 +24,16 @@ public class Health : MonoBehaviour
 
     private void CheckIsAlive()
     {
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             anim.SetTrigger("Death");
+            if(gameObject.layer == 8)
+            {
+                GetComponent<PlayerInput>().enabled = false;
+            }
             GetComponent<EnemyMoving>().enabled = false;
-            GetComponent<Collider2D>().enabled = false;
+            gameObject.layer = 12;
+            GetComponent<Rigidbody2D>().bodyType = 0;
             //Destroy(GetComponent<Rigidbody2D>());
            /* DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();
             Destroy(dDNB);*/

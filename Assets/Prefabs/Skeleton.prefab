@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7731852022948644395}
   - component: {fileID: 7731852022948644394}
   - component: {fileID: 7731852022948644405}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Skeleton
   m_TagString: Damageable
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 7731852023928531255}
   - component: {fileID: 7731852023928531249}
   - component: {fileID: 7731852023928531254}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 7731852024111414247}
   - component: {fileID: 7731852024111414246}
   - component: {fileID: 7731852024111414241}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: HealthPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 7731852024127296824}
   - component: {fileID: 7731852024127296827}
   - component: {fileID: 7731852024127296826}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

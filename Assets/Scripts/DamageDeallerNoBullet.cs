@@ -16,7 +16,7 @@ public class DamageDeallerNoBullet : MonoBehaviour
     {
         if(collision.CompareTag("Damageable"))
         {
-            if (gameObject.layer != 8)
+            if (gameObject.layer == 13)
             {
                 anim.SetTrigger("Attack");
             }

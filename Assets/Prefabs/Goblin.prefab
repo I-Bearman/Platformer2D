@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6463110884958148467}
   - component: {fileID: 6463110884958148465}
   - component: {fileID: 6463110884958148464}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7815590804894688076}
   - component: {fileID: 7815590804894688067}
   - component: {fileID: 7815590804894688066}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7815590805349623872}
   - component: {fileID: 7815590805349623874}
   - component: {fileID: 7815590805349623873}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: HealthPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 7815590805658504779}
   - component: {fileID: 7815590805658504818}
   - component: {fileID: 7815590805658504819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Goblin
   m_TagString: Damageable
   m_Icon: {fileID: 0}
