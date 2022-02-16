@@ -15,7 +15,7 @@ public class ReversSlider : MonoBehaviour
 
     void Update()
     {
-        if(platform.velocity == Vector2.zero && Vector2.Distance(platform.position, lastPos) > 1)
+        if(platform.velocity == Vector2.zero && Vector2.Distance(platform.position, lastPos) > 0.5)
         {
             lastPos = platform.position;
             JointMotor2D motor = slider.motor;
