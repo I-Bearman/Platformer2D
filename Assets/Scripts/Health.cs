@@ -34,9 +34,6 @@ public class Health : MonoBehaviour
             GetComponent<EnemyMoving>().enabled = false;
             gameObject.layer = 12;
             GetComponent<Rigidbody2D>().bodyType = 0;
-            //Destroy(GetComponent<Rigidbody2D>());
-           /* DamageDeallerNoBullet dDNB = GetComponent<DamageDeallerNoBullet>();
-            Destroy(dDNB);*/
         }
     }
 
