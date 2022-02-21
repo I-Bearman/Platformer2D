@@ -432,6 +432,7 @@ MonoBehaviour:
   maxHealth: 50
   healthImage: {fileID: 2955516152207685625}
   deathPanel: {fileID: 0}
+  attackArea: {fileID: 2072501623263643850}
 --- !u!114 &2955516153679401418
 MonoBehaviour:
   m_ObjectHideFlags: 0

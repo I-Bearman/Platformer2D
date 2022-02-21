@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthImage;
     [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject attackArea;
     private float currentHealth;
     private Animator anim;
 
@@ -32,6 +33,7 @@ public class Health : MonoBehaviour
                 GetComponent<PlayerInput>().enabled = false;
             }
             GetComponent<EnemyMoving>().enabled = false;
+            attackArea.SetActive(false);
             gameObject.layer = 12;
             GetComponent<Rigidbody2D>().bodyType = 0;
         }

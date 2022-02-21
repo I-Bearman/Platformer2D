@@ -13,7 +13,10 @@ public class TaleController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartLog();
+        if (collision.gameObject.layer == 8)
+        {
+            StartLog();
+        }
     }
     private void StartLog()
     {

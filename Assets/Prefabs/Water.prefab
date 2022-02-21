@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 798352145869335882}
   - component: {fileID: 798352145869335881}
   - component: {fileID: 798352145869335880}
+  - component: {fileID: 560750180}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -96,10 +97,10 @@ BuoyancyEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 3639
-  m_SurfaceLevel: 0
-  m_Density: 2
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_SurfaceLevel: 0.25
+  m_Density: 200
+  m_LinearDrag: 200
+  m_AngularDrag: 200
   m_FlowAngle: 0
   m_FlowMagnitude: 0
   m_FlowVariation: 0
@@ -113,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.145}
@@ -129,3 +130,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.41, y: 0.29}
   m_EdgeRadius: 0
+--- !u!68 &560750180
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798352145869335887}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.20440118, y: -0.0020858923}
+  - {x: 0.20440115, y: 0.0037975216}
