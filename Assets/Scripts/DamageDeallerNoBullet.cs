@@ -6,9 +6,12 @@ public class DamageDeallerNoBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Damageable"))
+        if (!collision.isTrigger)
         {
-            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            if (collision.CompareTag("Damageable"))
+            {
+                collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            }
         }
     }
 }

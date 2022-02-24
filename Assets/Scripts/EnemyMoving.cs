@@ -10,6 +10,7 @@ public class EnemyMoving : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sp;
     private Attack attack;
+    private Shooter shooter;
 
     private const int idleState = 0;
     private const int walkState = 1;
@@ -25,7 +26,8 @@ public class EnemyMoving : MonoBehaviour
         rigitBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
-        attack = GetComponent<Attack>();
+        TryGetComponent<Attack>(out attack);
+        TryGetComponent<Shooter>(out shooter);
     }
 
     private void Update()
@@ -65,7 +67,14 @@ public class EnemyMoving : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             currentState = idleState;
-            attack.Hit();
+            if (attack)
+            {
+                attack.Hit();
+            }
+            else
+            {
+                shooter.Shoot();
+            }
         }
     }
 }

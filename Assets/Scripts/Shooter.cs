@@ -12,7 +12,7 @@ public class Shooter : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void Shoot(float direction)
+    public void Shoot()
     {
         anim.SetTrigger("Attack");
         GameObject currentBullet = Instantiate(bullet, firePoint.position, Quaternion.identity);
