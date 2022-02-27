@@ -74,3 +74,4 @@ MonoBehaviour:
   winPanel: {fileID: 0}
   bonusTextInGame: {fileID: 0}
   bonusTextInWinPanel: {fileID: 0}
+  enemyKilledText: {fileID: 0}

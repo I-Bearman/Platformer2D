@@ -1662,6 +1662,11 @@ PrefabInstance:
       propertyPath: bonusTextInGame
       value: 
       objectReference: {fileID: 2068953487}
+    - target: {fileID: 6430886934866236681, guid: 6127a1ea253a3d447929a4ac9485af0f,
+        type: 3}
+      propertyPath: enemyKilledText
+      value: 
+      objectReference: {fileID: 1397642463421421907}
     - target: {fileID: 6430886934866236682, guid: 6127a1ea253a3d447929a4ac9485af0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5849,6 +5854,18 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4cdde06148acc542ad8777ab3ac4a7c, type: 3}
+--- !u!114 &1397642463421421907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6412096728713158555, guid: a4cdde06148acc542ad8777ab3ac4a7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1397642463421421906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1500230079152204767
 PrefabInstance:
   m_ObjectHideFlags: 0

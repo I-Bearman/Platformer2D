@@ -1632,7 +1632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.835415, y: -0.29967833, z: -10}
+  m_LocalPosition: {x: -5.0782294, y: -0.3000982, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1740,6 +1740,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &544156493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6412096728713158555, guid: a4cdde06148acc542ad8777ab3ac4a7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1397642463421421906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &545377594
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,14 +2116,19 @@ PrefabInstance:
       objectReference: {fileID: 125920475}
     - target: {fileID: 6430886934866236681, guid: 6127a1ea253a3d447929a4ac9485af0f,
         type: 3}
+      propertyPath: bonusTextInGame
+      value: 
+      objectReference: {fileID: 2068953487}
+    - target: {fileID: 6430886934866236681, guid: 6127a1ea253a3d447929a4ac9485af0f,
+        type: 3}
       propertyPath: bonusTextInWinPanel
       value: 
       objectReference: {fileID: 299913001}
     - target: {fileID: 6430886934866236681, guid: 6127a1ea253a3d447929a4ac9485af0f,
         type: 3}
-      propertyPath: bonusTextInGame
+      propertyPath: enemyKilledText
       value: 
-      objectReference: {fileID: 2068953487}
+      objectReference: {fileID: 544156493}
     - target: {fileID: 6430886934866236682, guid: 6127a1ea253a3d447929a4ac9485af0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2216,7 +2233,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.828125, y: 1}
+    m_SensorSize: {x: 1.48125, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7805,6 +7822,11 @@ PrefabInstance:
       propertyPath: deathPanel
       value: 
       objectReference: {fileID: 1096551152}
+    - target: {fileID: 4942935003149833650, guid: d8215d04c99a15e48bef32a2b2de1592,
+        type: 3}
+      propertyPath: enemyKilledText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4942935003149833652, guid: d8215d04c99a15e48bef32a2b2de1592,
         type: 3}
       propertyPath: m_SortingLayerID

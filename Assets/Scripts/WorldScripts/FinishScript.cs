@@ -7,6 +7,7 @@ public class FinishScript : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [SerializeField] private Text bonusTextInGame;
     [SerializeField] private Text bonusTextInWinPanel;
+    [SerializeField] private Text enemyKilledText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +15,7 @@ public class FinishScript : MonoBehaviour
         {
             Rigidbody2D heroRig = hero.gameObject.GetComponent<Rigidbody2D>();
             heroRig.bodyType = (RigidbodyType2D)2;
+            enemyKilledText.text = $"You killed {Health.enemyKilled} enemy(ies)";
             bonusTextInWinPanel.text = $"You have collected {bonusTextInGame.text} coin(s)";
             winPanel.SetActive(true);
         }

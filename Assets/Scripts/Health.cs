@@ -9,9 +9,11 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject attackArea;
     private float currentHealth;
     private Animator anim;
+    public static int enemyKilled;
 
     private void Awake()
     {
+        enemyKilled = 0;
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
     }
@@ -28,17 +30,21 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             anim.SetTrigger("Death");
-            if(gameObject.layer == 8)
+            if(gameObject.layer == 8) //Hero
             {
                 GetComponent<PlayerInput>().enabled = false;
             }
-            GetComponent<EnemyMoving>().enabled = false;
-            if (attackArea)
+            if (gameObject.layer == 13) //Enemy
             {
-                attackArea.SetActive(false);
+                GetComponent<EnemyMoving>().enabled = false;
+                if (attackArea)
+                {
+                    attackArea.SetActive(false);
+                }
+                gameObject.layer = 12; //NPC
+                GetComponent<Rigidbody2D>().bodyType = 0;
+                enemyKilled++;
             }
-            gameObject.layer = 12;
-            GetComponent<Rigidbody2D>().bodyType = 0;
         }
     }
 
