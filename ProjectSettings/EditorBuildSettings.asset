@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3 level Cave.unity
     guid: 5d628bd4575163b49a8a6d346a3d85d2
+  - enabled: 1
+    path: Assets/Scenes/4 level Dark Wood.unity
+    guid: 37b23310dfb45854f9388497e24c9e6d
+  - enabled: 1
+    path: Assets/Scenes/5 level Castle.unity
+    guid: 3f9285bd59f8c884faabb1fada89f468
   m_configObjects: {}

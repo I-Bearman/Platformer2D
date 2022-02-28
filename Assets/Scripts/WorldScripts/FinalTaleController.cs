@@ -5,13 +5,11 @@ using UnityEngine.Playables;
 public class FinalTaleController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject[] panel;
-    [SerializeField] private CinemachineVirtualCamera taleCamera;
+    [SerializeField] private EnemyMoving enemyMoving;
 
     private PlayableDirector playableDirector;
     private Animator playerAnim;
     private PlayerInput playerInput;
-    private int i, lenghtOfDialog;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +18,7 @@ public class FinalTaleController : MonoBehaviour
             playableDirector = GetComponent<PlayableDirector>();
             playableDirector.Play();
             StartLog();
+            playableDirector.stopped += FinishLog;
         }
     }
     private void StartLog()
@@ -28,32 +27,12 @@ public class FinalTaleController : MonoBehaviour
         playerInput = player.GetComponent<PlayerInput>();
         playerAnim.SetFloat("Speed",0);
         playerInput.enabled = false;
-
-        /*if(taleCamera)
-        {
-            taleCamera.Priority = 20;
-        }
-        i = 0;
-        panel[i].SetActive(true);
-        lenghtOfDialog = panel.Length;*/
-    }
-    public void NextLog()
-    {
-        if (i<lenghtOfDialog)
-        {
-            panel[i].SetActive(false);
-            panel[++i].SetActive(true);
-        }
     }
 
-    public void FinishLog()
+    public void FinishLog(PlayableDirector obj)
     {
-        panel[i].SetActive(false);
-        if (taleCamera)
-        {
-            taleCamera.Priority = 0;
-        }
         playerInput.enabled = true;
+        enemyMoving.enabled = true;
         Destroy(gameObject);
     }
 }
