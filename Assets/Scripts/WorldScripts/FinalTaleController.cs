@@ -19,7 +19,7 @@ public class FinalTaleController : MonoBehaviour
         {
             playableDirector = GetComponent<PlayableDirector>();
             playableDirector.Play();
-            //StartLog();
+            StartLog();
         }
     }
     private void StartLog()
@@ -29,13 +29,13 @@ public class FinalTaleController : MonoBehaviour
         playerAnim.SetFloat("Speed",0);
         playerInput.enabled = false;
 
-        if(taleCamera)
+        /*if(taleCamera)
         {
             taleCamera.Priority = 20;
         }
         i = 0;
         panel[i].SetActive(true);
-        lenghtOfDialog = panel.Length;
+        lenghtOfDialog = panel.Length;*/
     }
     public void NextLog()
     {
