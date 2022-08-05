@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Cinemachine;
 using UnityEngine.Playables;
 
 public class FinalTaleController : MonoBehaviour
